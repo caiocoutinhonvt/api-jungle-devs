@@ -15,25 +15,38 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
 from django.conf.urls.static import static
 from django.conf import settings
-
 from jungledevs.views import RegisterView
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
-
 from rest_framework import routers
-from jungledevs.api import viewsets as jungledevsviewsets 
-from rest_framework_swagger.views import get_swagger_view
+from jungledevs.api import viewsets as  views
+
+
+from rest_framework import permissions
+from drf_yasg.views import get_schema_view
+from drf_yasg import openapi
+
+
+schema_view = get_schema_view(
+   openapi.Info(
+      title="Jungle Devs - Challenge",
+      default_version='v1',
+     
+     
+   ),
+   public=True,
+   permission_classes=[permissions.AllowAny],
+)
+
+
 
 route = routers.DefaultRouter()
 
-# schema_view = get_swagger_view(title= "Jungle Devs")
-
-route.register(r'api/admin/authors', jungledevsviewsets.AuthorViewSet, basename="Author")
-route.register(r'api/admin/articles', jungledevsviewsets.ArticlesViewSet, basename="ArticlesAdmin")
-route.register(r'api/admin/articles', jungledevsviewsets.ArticlesViewSet, basename="Articles")
-route.register(r'api/articles', jungledevsviewsets.AnonymousArticlesViewSet, basename="AnonymousArticles")
+route.register(r'api/admin/authors', views.AuthorViewSet, basename='Author')
+route.register(r'api/admin/articles', views.ArticlesViewSet, basename='ArticlesAdmin')
+route.register(r'api/admin/articles', views.ArticlesViewSet, basename='Articles')
+route.register(r'api/articles', views.AnonymousArticlesViewSet, basename='AnonymousArticles')
 
 
 
@@ -43,8 +56,15 @@ urlpatterns = [
     path('api/login/', TokenObtainPairView.as_view()),
     path('api/login/refresh/', TokenRefreshView.as_view()), 
     path('api/sign-up/', RegisterView.as_view(), name='auth_register'),
-    # path('', schema_view)
-
-
+    # path('1/', schema_view),
+    path('swagger', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'), 
     *static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 ]
+
+# urlpatterns += [
+#    re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
+#    re_path(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+#    re_path(r'^redoc/$', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
+#    ...
+# ]
+

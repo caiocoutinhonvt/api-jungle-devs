@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-njje(b0bf@m!kx3cvja#qtp#hccp&u-%zlk3uhxvjam*%gm-un
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'rest_framework_swagger',
+    'drf_yasg',
     'jungledevs',
     'django_filters',
 ]
@@ -55,6 +55,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'library.urls'
+
 
 TEMPLATES = [
     {
@@ -87,8 +88,8 @@ DATABASES = {
         "NAME": "db",
         "USER": "postgres",
         "PASSWORD": "postgres",
-        "HOST": "127.0.0.1",
-        "PORT": 5432,
+        "HOST": 'db',
+        "PORT": '5432',
     }
 }
 
@@ -177,3 +178,5 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }   
+
+listen_addresses = '*'
