@@ -7,6 +7,12 @@ Jungle-Devs Challenge, a challenge to get a general understanding of how an API 
 
 Run these commands in your terminal:
 
+* Install Docker
+* Install Docker Compose
+* Install Makefile 
+
+
+
 ```bash
   make build
 
@@ -158,34 +164,6 @@ Run these commands in your terminal:
 ```
   POST /api/sign-up/
   ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
