@@ -1,7 +1,17 @@
 # Jungle Devs Challenge ###001
 
 
-Jungle-Devs Challenge, a challenge to get a general understanding of how an API works, made in Django REST Framework
+A challenge to get a general understanding of how an API works, made in Django REST Framework. The concepts applied were:
+
+- REST architecture;
+- Authentication and permissions;
+- Data modeling and migrations;
+- PostgreSQL database;
+- Query optimization;
+- Serialization;
+- Production builds (using Docker).
+
+
 ## Install
 
 
@@ -164,6 +174,12 @@ Run these commands in your terminal:
 ```
   POST /api/sign-up/
   ```
+  
+  
+## Screenshot
+
+
+<img alt="demoimage" title ="demoimage"  src ='https://user-images.githubusercontent.com/100374964/170395251-99a05ba9-83ba-4312-8c31-34722b304f10.png'/> 
 
 
 
