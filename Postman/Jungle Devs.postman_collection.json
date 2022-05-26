@@ -1,0 +1,732 @@
+{
+	"info": {
+		"_postman_id": "d4d61480-1fdb-4732-9572-977132ee87e7",
+		"name": "Jungle Devs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21027316"
+	},
+	"item": [
+		{
+			"name": "Articles",
+			"item": [
+				{
+					"name": "All Articles for ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{server}}/api/admin/articles/fa29bd45-1501-4a8f-8019-437380042515",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"articles",
+								"fa29bd45-1501-4a8f-8019-437380042515"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All articles - Admin",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "category",
+								"value": "teste",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{server}}/api/admin/articles/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"articles",
+								""
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Lifestyle",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All articles",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{server}}/api/articles/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"articles",
+								""
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Books2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Articles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "author_id",
+									"value": "94bf6b49-2292-4d43-ac1c-a4112e9b582f",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "Python",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Api",
+									"type": "text"
+								},
+								{
+									"key": "summary",
+									"value": "Jungle devs Challenge",
+									"type": "text"
+								},
+								{
+									"key": "firstParagraph",
+									"value": "ok",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere sagittis gravida. Proin sodales urna ipsum, dapibus faucibus diam elementum at. Aliquam faucibus sapien at eleifend malesuada. Pellentesque non sem tristique, varius nulla at, varius nunc. Integer congue vestibulum mi, sed cursus dolor suscipit id. Curabitur condimentum imperdiet tellus a malesuada. Vivamus imperdiet erat ante, sit amet bibendum lectus porttitor a. Suspendisse et iaculis sapien. Suspendisse pellentesque molestie sagittis. Donec ut sollicitudin elit.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/api/admin/articles/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"articles",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Articles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "fa29bd45-1501-4a8f-8019-437380042515",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "author_id",
+									"value": "94bf6b49-2292-4d43-ac1c-a4112e9b582f",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "Lifestyle",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Ahsuahsuah",
+									"type": "text"
+								},
+								{
+									"key": "summary",
+									"value": "TESTE",
+									"type": "text"
+								},
+								{
+									"key": "firstParagraph",
+									"value": "ok",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere sagittis gravida. Proin sodales urna ipsum, dapibus faucibus diam elementum at. Aliquam faucibus sapien at eleifend malesuada. Pellentesque non sem tristique, varius nulla at, varius nunc. Integer congue vestibulum mi, sed cursus dolor suscipit id. Curabitur condimentum imperdiet tellus a malesuada. Vivamus imperdiet erat ante, sit amet bibendum lectus porttitor a. Suspendisse et iaculis sapien. Suspendisse pellentesque molestie sagittis. Donec ut sollicitudin elit.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/api/admin/articles/03f7f702-bc54-494e-ad4d-8c87d13db672/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"articles",
+								"03f7f702-bc54-494e-ad4d-8c87d13db672",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Articles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "fa29bd45-1501-4a8f-8019-437380042515",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "[object Object]",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "Lifestyle",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Ahsuahsuah",
+									"type": "text"
+								},
+								{
+									"key": "summary",
+									"value": "TESTE",
+									"type": "text"
+								},
+								{
+									"key": "firstParagraph",
+									"value": "ok",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/api/admin/articles/6945f53c-1624-4c30-b679-20164a59a569/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"articles",
+								"6945f53c-1624-4c30-b679-20164a59a569",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Articles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/admin/articles/1a196825-58dc-4d38-96f6-ef73c2417994/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"articles",
+								"1a196825-58dc-4d38-96f6-ef73c2417994",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Author",
+			"item": [
+				{
+					"name": "All Author for ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/admin/authors/1e65e203-4bdb-4b8b-b71d-74e77c0014d8/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"authors",
+								"1e65e203-4bdb-4b8b-b71d-74e77c0014d8",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Author",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/api/admin/authors/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"authors",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Author",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Vitor",
+									"type": "text"
+								},
+								{
+									"key": "picture",
+									"type": "file",
+									"src": "/home/pc/Downloads/3c5a026d-09c2-4e84-8bba-ade7aa985daa.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/api/admin/authors/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"authors",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Author",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id\n",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "picture",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/api/admin/authors/94bf6b49-2292-4d43-ac1c-a4112e9b582f",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"authors",
+								"94bf6b49-2292-4d43-ac1c-a4112e9b582f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Author",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "94bf6b49-2292-4d43-ac1c-a4112e9b582f",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Julio",
+									"type": "text"
+								},
+								{
+									"key": "picture",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/api/admin/authors/94bf6b49-2292-4d43-ac1c-a4112e9b582f/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"authors",
+								"94bf6b49-2292-4d43-ac1c-a4112e9b582f",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Author",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/api/admin/authors/063446d2-f14f-400b-981b-d6622fe7da52/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"authors",
+								"063446d2-f14f-400b-981b-d6622fe7da52",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"Has Token\"] = jsonData.access.length > 0 ;",
+									"postman.setEnvironmentVariable(\"token\", jsonData.access);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "saimon",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "firstuser",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/api/login/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "saimon",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "firstuser",
+									"type": "text"
+								},
+								{
+									"key": "password2",
+									"value": "firstuser",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "saimon@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "user",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "one",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/api/sign-up/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"sign-up",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

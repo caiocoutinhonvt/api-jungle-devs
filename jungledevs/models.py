@@ -1,5 +1,6 @@
 from django.db import models
 from uuid import uuid4
+from rest_framework import serializers
 # Create your models here.
 
 
@@ -20,6 +21,14 @@ class Articles(models.Model):
     firstParagraph = models.CharField(max_length=200)
     body = models.CharField(max_length=1000)
    
+    def clean(self):
+        if self.body is not None:
+            if len(self.body) < 50:
+                raise serializers.ValidationError({"body": 'body minimum digits is 50'})
+
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        return super().save(*args, **kwargs)
 
    
 
