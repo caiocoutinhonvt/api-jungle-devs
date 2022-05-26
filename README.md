@@ -73,7 +73,7 @@ Run these commands in your terminal:
   POST /api/admin/articles/
 ```
 
-| Parâmetro   | Tipo       | Descrição                           |
+| Parameters   | Type       | Description                           |
 | :---------- | :--------- | :---------------------------------- |
 | `author_id` | `string` | **Mandatory**|
 | `category` | `string` | **Mandatory**|
@@ -88,7 +88,7 @@ Run these commands in your terminal:
   PUT /api/admin/articles/${id}
 ```
 
-| Parâmetro   | Tipo       | 
+|  Parameters   | Type       | 
 | :---------- | :--------- | 
 | `author_id` | `string` | 
 | `category` | `string` |
@@ -129,7 +129,7 @@ Run these commands in your terminal:
 ```
   GET /api/admin/authors/
 ```
-| Parâmetro   | Tipo       | Descrição                           |
+| Parameters   | Type       | Description                          |
 | :---------- | :--------- | :---------------------------------- |
 | `author_id` | `string` | **Mandatory**|
 | `picture` | `string` | **Mandatory**|
@@ -142,7 +142,7 @@ Run these commands in your terminal:
   PUT /api/admin/authors/${id}
 ```
 
-| Parâmetro   | Tipo       | 
+| Parameters   | Type       | 
 | :---------- | :--------- | 
 | `id` | `string` | 
 | `name` | `string` |
