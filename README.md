@@ -175,6 +175,10 @@ Run these commands in your terminal:
   POST /api/sign-up/
   ```
   
+#### To acess Swagger 
+
+localhost:/swagger
+
   
 ## Screenshot
 
