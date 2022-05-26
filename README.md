@@ -34,26 +34,26 @@ Run these commands in your terminal:
 
 ### Admin end-point Articles 
 
-```http
+```
   GET /api/admin/articles/
 ```
 
 
 #### Return All Articles
 
-```http
+```
   GET /api/articles/
 ```
 
 
 #### Return Articles for ID
 
-```http
+```
   GET /api/articles/${id}
 ```
 #### Create Articles
 
-```http
+```
   POST /api/admin/articles/
 ```
 
@@ -68,7 +68,7 @@ Run these commands in your terminal:
 
 #### Edit Articles (pass all parameters)
 
-```http
+```
   PUT /api/admin/articles/${id}
 ```
 
@@ -83,13 +83,13 @@ Run these commands in your terminal:
 
 #### Edit Articles (pass parameters individually)
 
-```http
+```
   PATCH /api/admin/articles/${id}
 ```
 
 #### Delete articles 
 
-```http
+```
   DELETE /api/admin/articles/${id}
 ```
 
@@ -97,20 +97,20 @@ Run these commands in your terminal:
 
 #### Return All Author
 
-```http
+```
   GET /api/admin/authors/
 ```
 
 #### Return All Author for ID
 
-```http
+```
   GET /api/admin/authors/${id}
 ```
 
 
 #### Create Author
 
-```http
+```
   GET /api/admin/authors/
 ```
 | Parâmetro   | Tipo       | Descrição                           |
@@ -122,7 +122,7 @@ Run these commands in your terminal:
 
 #### Edit Author (pass all parameters)
 
-```http
+```
   PUT /api/admin/authors/${id}
 ```
 
@@ -135,13 +135,13 @@ Run these commands in your terminal:
 
 #### Edit Author (pass parameters individually)
 
-```http
+```
   PATCH /api/admin/authors/${id}
 ```
 
 #### Delete articles (pass parameters individually)
 
-```http
+```
   DELETE /api/admin/authors/${id}
   ```
 
@@ -149,13 +149,13 @@ Run these commands in your terminal:
 
 #### Login
 
-```http
+```
   POST /api/login/
 ```
 
 #### Sign-up
 
-```http
+```
   POST /api/sign-up/
   ```
 
