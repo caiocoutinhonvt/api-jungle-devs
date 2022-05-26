@@ -177,7 +177,7 @@ Run these commands in your terminal:
   
 #### To acess Swagger 
 
-localhost:/swagger
+http://0.0.0.0:8000/swagger
 
   
 ## Screenshot
