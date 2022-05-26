@@ -3,8 +3,12 @@ version: '3.8'
 services :
 
   web:
+<<<<<<< HEAD
     image: caiocoutinhonvt/jungle-devs
     container_name: web
+=======
+    build: .
+>>>>>>> 552d4c350106bbe0a27c4ced3ebc402d6e53c48b
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - ./:/usr/src/app
