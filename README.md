@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 # Jungle Devs Challenge ###001
 
 
@@ -68,7 +66,7 @@ Run these commands in your terminal:
 #### Return Articles for ID
 
 ```
-  GET /api/articles/${id}
+  GET /api/articles/${id}/
 ```
 #### Create Articles
 
@@ -88,7 +86,7 @@ Run these commands in your terminal:
 #### Edit Articles (pass all parameters)
 
 ```
-  PUT /api/admin/articles/${id}
+  PUT /api/admin/articles/${id}/
 ```
 
 |  Parameters   | Type       | 
@@ -103,13 +101,13 @@ Run these commands in your terminal:
 #### Edit Articles (pass parameters individually)
 
 ```
-  PATCH /api/admin/articles/${id}
+  PATCH /api/admin/articles/${id}/
 ```
 
 #### Delete articles 
 
 ```
-  DELETE /api/admin/articles/${id}
+  DELETE /api/admin/articles/${id}/
 ```
 
 ### Author 
@@ -123,7 +121,7 @@ Run these commands in your terminal:
 #### Return All Author for ID
 
 ```
-  GET /api/admin/authors/${id}
+  GET /api/admin/authors/${id}/
 ```
 
 
@@ -142,7 +140,7 @@ Run these commands in your terminal:
 #### Edit Author (pass all parameters)
 
 ```
-  PUT /api/admin/authors/${id}
+  PUT /api/admin/authors/${id}/
 ```
 
 | Parameters   | Type       | 
@@ -155,13 +153,13 @@ Run these commands in your terminal:
 #### Edit Author (pass parameters individually)
 
 ```
-  PATCH /api/admin/authors/${id}
+  PATCH /api/admin/authors/${id}/
 ```
 
 #### Delete articles (pass parameters individually)
 
 ```
-  DELETE /api/admin/authors/${id}
+  DELETE /api/admin/authors/${id}/
   ```
 
 ### User 
@@ -197,4 +195,4 @@ http://0.0.0.0:8000/swagger
 
 [Jungle Devs Challenge](https://github.com/JungleDevs/django-challenge-001)
 
->>>>>>> 552d4c350106bbe0a27c4ced3ebc402d6e53c48b
+

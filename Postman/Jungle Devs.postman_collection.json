@@ -32,7 +32,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "{{server}}/api/admin/articles/fa29bd45-1501-4a8f-8019-437380042515",
+							"raw": "{{server}}/api/admin/articles/${id}/",
 							"host": [
 								"{{server}}"
 							],
@@ -40,7 +40,8 @@
 								"api",
 								"admin",
 								"articles",
-								"fa29bd45-1501-4a8f-8019-437380042515"
+								"${id}",
+								""
 							]
 						}
 					},
@@ -254,7 +255,7 @@
 							]
 						},
 						"url": {
-							"raw": "{{server}}/api/admin/articles/03f7f702-bc54-494e-ad4d-8c87d13db672/",
+							"raw": "{{server}}/api/admin/articles/${id}/",
 							"host": [
 								"{{server}}"
 							],
@@ -262,7 +263,7 @@
 								"api",
 								"admin",
 								"articles",
-								"03f7f702-bc54-494e-ad4d-8c87d13db672",
+								"${id}",
 								""
 							]
 						}
@@ -320,7 +321,7 @@
 							]
 						},
 						"url": {
-							"raw": "{{server}}/api/admin/articles/6945f53c-1624-4c30-b679-20164a59a569/",
+							"raw": "{{server}}/api/admin/articles/${id}/",
 							"host": [
 								"{{server}}"
 							],
@@ -328,7 +329,7 @@
 								"api",
 								"admin",
 								"articles",
-								"6945f53c-1624-4c30-b679-20164a59a569",
+								"${id}",
 								""
 							]
 						}
@@ -351,7 +352,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{server}}/api/admin/articles/1a196825-58dc-4d38-96f6-ef73c2417994/",
+							"raw": "{{server}}/api/admin/articles/${id}/",
 							"host": [
 								"{{server}}"
 							],
@@ -359,7 +360,7 @@
 								"api",
 								"admin",
 								"articles",
-								"1a196825-58dc-4d38-96f6-ef73c2417994",
+								"${id}",
 								""
 							]
 						}
@@ -387,7 +388,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{server}}/api/admin/authors/1e65e203-4bdb-4b8b-b71d-74e77c0014d8/",
+							"raw": "{{server}}/api/admin/authors/${id}/",
 							"host": [
 								"{{server}}"
 							],
@@ -395,7 +396,7 @@
 								"api",
 								"admin",
 								"authors",
-								"1e65e203-4bdb-4b8b-b71d-74e77c0014d8",
+								"${id}",
 								""
 							]
 						}
@@ -503,11 +504,6 @@
 							"mode": "formdata",
 							"formdata": [
 								{
-									"key": "id\n",
-									"value": "",
-									"type": "text"
-								},
-								{
 									"key": "name",
 									"value": "",
 									"type": "text"
@@ -520,7 +516,7 @@
 							]
 						},
 						"url": {
-							"raw": "{{server}}/api/admin/authors/94bf6b49-2292-4d43-ac1c-a4112e9b582f",
+							"raw": "{{server}}/api/admin/authors/${id}/",
 							"host": [
 								"{{server}}"
 							],
@@ -528,7 +524,8 @@
 								"api",
 								"admin",
 								"authors",
-								"94bf6b49-2292-4d43-ac1c-a4112e9b582f"
+								"${id}",
+								""
 							]
 						}
 					},
@@ -553,13 +550,8 @@
 							"mode": "formdata",
 							"formdata": [
 								{
-									"key": "id",
-									"value": "94bf6b49-2292-4d43-ac1c-a4112e9b582f",
-									"type": "text"
-								},
-								{
 									"key": "name",
-									"value": "Julio",
+									"value": "Fernando",
 									"type": "text"
 								},
 								{
@@ -570,7 +562,7 @@
 							]
 						},
 						"url": {
-							"raw": "{{server}}/api/admin/authors/94bf6b49-2292-4d43-ac1c-a4112e9b582f/",
+							"raw": "{{server}}/api/admin/authors/${id}/",
 							"host": [
 								"{{server}}"
 							],
@@ -578,7 +570,7 @@
 								"api",
 								"admin",
 								"authors",
-								"94bf6b49-2292-4d43-ac1c-a4112e9b582f",
+								"${id}",
 								""
 							]
 						}
@@ -605,7 +597,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{server}}/api/admin/authors/063446d2-f14f-400b-981b-d6622fe7da52/",
+							"raw": "{{server}}/api/admin/authors/${id}/",
 							"host": [
 								"{{server}}"
 							],
@@ -613,7 +605,7 @@
 								"api",
 								"admin",
 								"authors",
-								"063446d2-f14f-400b-981b-d6622fe7da52",
+								"${id}",
 								""
 							]
 						}
