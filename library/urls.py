@@ -53,9 +53,9 @@ route.register(r'api/articles', views.AnonymousArticlesViewSet, basename='Anonym
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(route.urls)),
-    path('api/login/', TokenObtainPairView.as_view()),
+    path('api/login/', TokenObtainPairView.as_view(), name='login'),
     path('api/login/refresh/', TokenRefreshView.as_view()), 
-    path('api/sign-up/', RegisterView.as_view(), name='auth_register'),
+    path('api/sign-up/', RegisterView.as_view(), name='sign_up'),
     # path('1/', schema_view),
     path('swagger', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'), 
     *static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

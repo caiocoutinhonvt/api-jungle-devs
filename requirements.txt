@@ -6,7 +6,5 @@ Markdown==3.3.7
 drf-yasg==1.20.0
 psycopg2-binary==2.9.3
 djangorestframework-simplejwt
-<<<<<<< HEAD
 ipdb==0.13.9
-=======
->>>>>>> 552d4c350106bbe0a27c4ced3ebc402d6e53c48b
+coverage==6.4

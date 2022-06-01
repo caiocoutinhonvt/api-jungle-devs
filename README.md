@@ -195,4 +195,7 @@ http://0.0.0.0:8000/swagger
 
 [Jungle Devs Challenge](https://github.com/JungleDevs/django-challenge-001)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 169736374875b1bd8c77e5f5cb8a02cbf5b981bf
