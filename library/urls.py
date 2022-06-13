@@ -21,6 +21,8 @@ from jungledevs.views import RegisterView
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from rest_framework import routers
 from jungledevs.api import viewsets as  views
+from jungledevs.views import AuthorDocumentView
+from jungledevs.views import ArticleDocumentView
 
 
 from rest_framework import permissions
@@ -49,7 +51,6 @@ route.register(r'api/admin/articles', views.ArticlesViewSet, basename='Articles'
 route.register(r'api/articles', views.AnonymousArticlesViewSet, basename='AnonymousArticles')
 
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(route.urls)),
@@ -58,6 +59,18 @@ urlpatterns = [
     path('api/sign-up/', RegisterView.as_view(), name='sign_up'),
     # path('1/', schema_view),
     path('swagger', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'), 
+
+    path('author/search/', AuthorDocumentView.as_view({'get': 'list'}), name='author'),
+    path('articles/search', ArticleDocumentView.as_view({'get': 'list'}), name = 'articleview'),
+
+
+
+
+
+
+
+
+
     *static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 ]
 

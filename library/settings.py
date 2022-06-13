@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-njje(b0bf@m!kx3cvja#qtp#hccp&u-%zlk3uhxvjam*%gm-un
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'drf_yasg',
     'jungledevs',
     'django_filters',
+    'django_elasticsearch_dsl',
+    'django_elasticsearch_dsl_drf',
+
 ]
 
 MIDDLEWARE = [
@@ -180,3 +183,12 @@ SIMPLE_JWT = {
 }   
 
 listen_addresses = '*'
+
+
+ELASTICSEARCH_DSL = {
+    'default': {
+        'hosts': 'elasticsearch',
+
+    }
+}
+
