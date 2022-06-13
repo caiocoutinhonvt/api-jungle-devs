@@ -32,4 +32,4 @@ class ArticleDocument(Document):
     class Django:
         model = Articles
 
-        fields = ["category", "title"]
+        fields = ["id","category", "title", "summary", "firstParagraph", "body"]

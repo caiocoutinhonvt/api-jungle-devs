@@ -61,7 +61,7 @@ urlpatterns = [
     path('swagger', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'), 
 
     path('author/search/', AuthorDocumentView.as_view({'get': 'list'}), name='author'),
-    path('articles/search', ArticleDocumentView.as_view({'get': 'list'}), name = 'articleview'),
+    path('articles/search/', ArticleDocumentView.as_view({'get': 'list'}), name = 'articleview'),
 
 
 
